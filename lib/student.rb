@@ -39,7 +39,7 @@ class Student
     grade_9 = []
 
     sql = <<-SQL
-      SELECT name
+      SELECT name, grade
       FROM students
       WHERE grade = 9
       LIMIT 1
