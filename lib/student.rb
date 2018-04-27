@@ -47,9 +47,9 @@ class Student
 
     DB[:conn].execute(sql, name).map do |row|
       self.new_from_db(row)
-      
+
       grade_9 << self
-    end
+    end.first
   end
 
   def self.students_below_12th_grade
